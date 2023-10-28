@@ -18,7 +18,7 @@ public:
     }
     ~HitBox() {}
 
-    bool DetectarColision(HitBox* hitbox)
+    bool DetectarColision(HitBox *hitbox)
     {
         int der1 = this->x + this->dx;
         int der2 = hitbox->x + hitbox->dx;
@@ -26,9 +26,9 @@ public:
         int izq1 = this->x;
         int izq2 = hitbox->x;
 
-        if(der1 > izq2 )
+        if (der1 > izq2)
             return true;
-        if(izq1 <der2 )
+        if (izq1 < der2)
             return true;
 
         // Calculos para hitbox

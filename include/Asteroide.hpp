@@ -6,7 +6,7 @@
 class Asteroide : public Dibujo, public Actualizable
 {
 private:
-    //Vector posicion;
+    // Vector posicion;
 
 public:
     Asteroide() : Dibujo("asteroide")
@@ -14,13 +14,11 @@ public:
         this->posicion = Vector();
     }
 
-
-    Asteroide(int x,int y):Dibujo("asteroide"){
+    Asteroide(int x, int y) : Dibujo("asteroide")
+    {
         this->posicion.DesplazarX(x);
         this->posicion.DesplazarY(y);
     }
-
-
 
     void Actualizar()
     {

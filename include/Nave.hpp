@@ -10,19 +10,19 @@ private:
     // Vector posicion;
 
 public:
-    Nave() : Dibujo("ship"), 
-        HitBox(
-            this->posicion.LeerX(),
-            this->posicion.LeerY(),
-            12,4)
+    Nave() : Dibujo("ship"),
+             HitBox(
+                 this->posicion.LeerX(),
+                 this->posicion.LeerY(),
+                 12, 4)
     {
         this->posicion = Vector();
     }
 
-    Nave(int x, int y) : Dibujo("ship"),HitBox(
-            this->posicion.LeerX(),
-            this->posicion.LeerY(),
-            12,4)
+    Nave(int x, int y) : Dibujo("ship"), HitBox(
+                                             this->posicion.LeerX(),
+                                             this->posicion.LeerY(),
+                                             12, 4)
     {
         this->posicion.DesplazarX(x);
         this->posicion.DesplazarY(y);
@@ -30,8 +30,8 @@ public:
 
     void Actualizar()
     {
-        this->x= posicion.LeerX();
-        this->y= posicion.LeerY();
+        this->x = posicion.LeerX();
+        this->y = posicion.LeerY();
     }
     void Avanzard()
     {
@@ -55,7 +55,8 @@ public:
         this->posicion.CambiarDireccionY();
     }
 
-    Vector LeerPosicion(){
+    Vector LeerPosicion()
+    {
         return this->posicion;
     }
     ~Nave()

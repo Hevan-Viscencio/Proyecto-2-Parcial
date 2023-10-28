@@ -6,7 +6,7 @@
 class Space : public Dibujo, public Actualizable
 {
 private:
-    //Vector posicion;
+    // Vector posicion;
 
 public:
     Space() : Dibujo("space")
@@ -14,12 +14,10 @@ public:
         this->posicion = Vector();
     }
 
-
-    Space(int x,int y):Dibujo("space"){
+    Space(int x, int y) : Dibujo("space")
+    {
         this->posicion.DesplazarX(x);
     }
-
-
 
     void Actualizar()
     {

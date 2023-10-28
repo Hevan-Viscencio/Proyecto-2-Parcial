@@ -24,23 +24,22 @@ public:
 
         cbreak();
         timeout(60);
-        keypad(stdscr,TRUE);
-
+        keypad(stdscr, TRUE);
 
         getmaxyx(stdscr, x, y);
         cerrar = false;
     }
 
-    void Actualizar(list<Actualizable*> listaActualizables)
+    void Actualizar(list<Actualizable *> listaActualizables)
     {
         for (auto &&iterator : listaActualizables)
         {
             iterator->Actualizar();
         }
-       // usleep(41000);
+        // usleep(41000);
     }
 
-    void Dibujar(list<Dibujo*> listaDibujos)
+    void Dibujar(list<Dibujo *> listaDibujos)
     {
         clear();
 
@@ -63,7 +62,7 @@ public:
 
     ~Ventana()
     {
-        keypad(stdscr,FALSE);
+        keypad(stdscr, FALSE);
         endwin();
     }
-}; 
+};

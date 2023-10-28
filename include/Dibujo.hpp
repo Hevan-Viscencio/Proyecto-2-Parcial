@@ -12,24 +12,20 @@ private:
     bool is_open;
     string directorio;
 
-
 protected:
     Vector posicion;
 
-
 public:
-
     Dibujo(int x, int y, string recurso)
     {
         this->directorio = "./data/" + recurso + ".txt";
         this->is_open = false;
         this->archivo.open(this->directorio, ios::in);
-        this ->posicion= Vector(x,y);
+        this->posicion = Vector(x, y);
     }
-    Dibujo(string recurso) : Dibujo(0,0,recurso){
-        
+    Dibujo(string recurso) : Dibujo(0, 0, recurso)
+    {
     }
-
 
     void Dibujar()
     {
@@ -37,13 +33,12 @@ public:
         {
             std::string line;
             move(
-                this->posicion.LeerY(), 
-                this->posicion.LeerX()     
-            );
+                this->posicion.LeerY(),
+                this->posicion.LeerX());
 
             while (std::getline(archivo, line))
             {
-                
+
                 // printw(line.c_str()); // Output each line to the console
                 int y;
                 y = getcury(stdscr);
