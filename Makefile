@@ -1,5 +1,5 @@
-bin/ship : src/ship.cpp include/*
-	c++ src/ship.cpp -o bin/ship -I include -lcurses
+bin/spacerace : src/spacerace.cpp include/*
+	c++ src/spacerace.cpp -o bin/spacerace -I include -lcurses
 
-run : bin/ship
-	./bin/ship
+run : bin/spacerace
+	./bin/spacerace

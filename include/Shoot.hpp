@@ -19,3 +19,4 @@ public:
         this->posicion.DesplazarY(-1);
     }
 };
+

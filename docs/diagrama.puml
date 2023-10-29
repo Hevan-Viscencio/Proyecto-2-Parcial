@@ -1,0 +1,85 @@
+@startuml SpaceRace
+
+class Cohete {
+    +EstablecerNombr()
+}
+class Asteroide
+{
+    +AsignarNombre()
+}
+class Borde{
+    +AsignarNombre()
+}
+class Controlador{
+    +AsignarNombre()
+}
+class Pantalla{
+    +AsignarNombre()
+}
+class Puntaje{
+    +AsignarNombre()
+}
+class CoheteEnemigo{
+    +AsignarNombre()
+}
+class Fin{
+    +AsignarNombre()
+}
+class Animacion{
+    +AsignarNombre()
+}
+class Muerte{
+    +AsignarNombre()
+}
+class Patron{
+    +AsignarNombre()
+}
+class Tiempo{
+    +AsignarNombre()
+}
+class Posicion{
+    +AsignarNombre()
+}
+class Cordenada{
+    +AsignarNombre()
+}
+class Imagen{
+    +AsignarNombre()
+}
+
+Pantalla *-- Puntaje
+Pantalla *-- Cohete
+Pantalla *-- Borde
+Pantalla --o Controlador
+Pantalla *-- Asteroide
+Pantalla *-- CoheteEnemigo
+Pantalla *-- Fin
+Pantalla --o Animacion 
+
+Cohete o-- Controlador
+Cohete --* Puntaje
+Cohete o--Asteroide
+Cohete --* Posicion
+Cohete --|> Imagen
+
+CoheteEnemigo --* Puntaje
+CoheteEnemigo o--Asteroide
+CoheteEnemigo --* Patron
+CoheteEnemigo --* Puntaje
+CoheteEnemigo --* Posicion
+CoheteEnemigo --|> Imagen
+
+Asteroide o-- Animacion
+Asteroide --|> Muerte
+Asteroide --* Patron
+Asteroide o--Borde
+Asteroide --*Posicion
+Asteroide --|> Imagen
+
+Imagen --o Animacion
+Controlador o-- Posicion
+Posicion --* Cordenada
+Patron --* Tiempo
+Fin --o Puntaje
+
+@enduml
